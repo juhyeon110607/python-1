@@ -1,0 +1,102 @@
+#자료형
+# a=142 #int - 정수형
+# b=3.1 # float - 실수형
+# c="abcd" #str - 문자영
+
+#type - 들어간 값의 자료형을 알려줌
+#print(type(c))
+
+#문자영 - str
+# a= "asdf"
+# b= "가나다라"
+# c= a+b
+#print(c)
+
+#인덱싱,슬라이싱
+
+#언덱싱
+# a= "hello python!"
+# print(a[1]+"abcd")#0부터 센다,그리고 뛰어쓰기도 포합
+
+#스라이싱
+# a ="hello python!"
+# print(a[6:])
+# print(a[:4])
+#print(a[2:7])
+
+#bool - 참 거짓
+# a = True
+# b = False
+# print(a)
+# print(b)
+# print(type(a))
+
+#논리연산자
+# and = 묶인 조건이 모두 참이면 참 ex) a and b
+# or = 묶인 조건중이 하나라도 참이면 참 ex) a or b
+# == : 서로 같다면 참
+# != : 서로 다르다면 참
+# >,<,<=,>=
+
+#조건문 - if
+# if 조건:
+#      조건이 참일 때 실행할 코드
+
+# a= 7
+# if a != 7 or a <=10:
+#     print(a+4)
+#     a= a - 2
+#     if a==5:
+#         print(a)
+# print(a-4)
+
+#else - it 조건이 거짓일 때 무조건 실행
+# a=3
+# if a> 4:
+#     print(a)
+# else:
+#     print(0)
+
+#elif - if의 조건이 거짓일 떄, 자신의 조건이 거짓일떄
+
+# a = "python"
+# if a != "python":
+#     print(a+a)
+# elif type(a) == str:
+#     print(a)
+# else:
+#     print(a+a+a)
+
+# a=1
+# b=2
+# if a<b:
+#     print("<")
+# elif a>b:
+#     print(">")
+# else:
+#     print("==")
+
+# a=90
+# b=80
+# c=70
+# d=60
+# f=59
+#
+# e=80
+#
+# if a<=e:
+#     print("A")
+# elif b<=e:
+#     print("B")
+# elif c<=e:
+#     print("C")
+# elif d<=e:
+#     print("D")
+# else :
+#     print("F")
+
+# a = 2022
+# if (a%4== 0 and s%100 !=0) or a%400 == 0:
+#     pfint(1)
+# else:
+#     print(0)
