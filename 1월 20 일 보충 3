@@ -1,0 +1,62 @@
+#a=3
+#b=2
+
+#입력함수 input
+
+# a=input()#문자열 자료형으로 값을 받음
+# print(a, type(a))
+
+# a = int(input())
+# print(a, type(a))
+
+#문자열 관련 함수
+a = "  HElllo python!, life is too short for us?  "
+#print(a.find("!"))#해당 입력된 문자열의 위치를 알려줌
+# print(a.find("k"))#문자열에 해당 값이 없다면 -값이 없다면 -1 값을 가지게 됨
+# print(a.count("l"))#해당 문자열에서 입력됨 문자의 갯수를 알려줌
+# print(a.lstrip())# 왼쪽 공백 제거
+# print(a.rstrip())# 오른쪽 공백 제거
+# print(a.strip())# 양 쪽 공백 제거
+# print(a.index("o"))#해당 문자열에서 입력됨 문자의 위치를 알려줌
+# print(a.index("k"))#문자열에 해당 값이 없다면 에러를 띄움
+# print(a.upper())# 소문자를 대문자로
+# print(a.lower())# 반대로 대문자를 소문자로
+# print(a.replace("life", "every thing"))#해당 문자열을 입력된 문자열로 바꿈
+# print(a.split(" "))#입력됨 값을 기준으로 문자열을 나눔
+
+# a= int(input())
+# if 90 <= a <= 100:
+#     print("A")
+# if 80<=a <=89:
+#      print("B")
+# if 70<=a <=79:
+#     print("C")
+# if 60<=a <=69:
+#      print("D")
+# if 59>=a:
+#      print("F")
+
+
+#반복문 for, while
+# while 조건: -> 조건이 참이면 아래 코드를 반복실행(거짓일 떄 까지 실해)
+#     반복해서 실행할 코드
+#
+#
+#
+#
+#
+
+
+#break -> 반복문 탈출 함수
+#continue -> 반복문 건너뛰기 함수
+
+# a= 0
+# while True:
+#
+#     if 5 <= a <= 10:
+#         continue
+#     print(a)
+#     a = a + 1
+#
+#     if a == 20:
+#         break
