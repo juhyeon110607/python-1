@@ -1,0 +1,194 @@
+#자료형
+# a=142 #int - 정수형
+# b=3.1 # float - 실수형
+# c="abcd" #str - 문자영
+
+#type - 들어간 값의 자료형을 알려줌
+#print(type(c))
+
+#문자영 - str
+# a= "asdf"
+# b= "가나다라"
+# c= a+b
+#print(c)
+
+#인덱싱,슬라이싱
+
+#언덱싱
+# a= "hello python!"
+# print(a[1]+"abcd")#0부터 센다,그리고 뛰어쓰기도 포합
+
+#스라이싱
+# a ="hello python!"
+# print(a[6:])
+# print(a[:4])
+#print(a[2:7])
+
+#bool - 참 거짓
+# a = True
+# b = False
+# print(a)
+# print(b)
+# print(type(a))
+
+#논리연산자
+# and = 묶인 조건이 모두 참이면 참 ex) a and b
+# or = 묶인 조건중이 하나라도 참이면 참 ex) a or b
+# == : 서로 같다면 참
+# != : 서로 다르다면 참
+# >,<,<=,>=
+
+#조건문 - if
+# if 조건:
+#      조건이 참일 때 실행할 코드
+
+# a= 7
+# if a != 7 or a <=10:
+#     print(a+4)
+#     a= a - 2
+#     if a==5:
+#         print(a)
+# print(a-4)
+
+#else - it 조건이 거짓일 때 무조건 실행
+# a=3
+# if a> 4:
+#     print(a)
+# else:
+#     print(0)
+
+#elif - if의 조건이 거짓일 떄, 자신의 조건이 거짓일떄
+
+# a = "python"
+# if a != "python":
+#     print(a+a)
+# elif type(a) == str:
+#     print(a)
+# else:
+#     print(a+a+a)
+
+# a=1
+# b=2
+# if a<b:
+#     print("<")
+# elif a>b:
+#     print(">")
+# else:
+#     print("==")
+
+# a=90
+# b=80
+# c=70
+# d=60
+# f=59
+#
+# e=80
+#
+# if a<=e:
+#     print("A")
+# elif b<=e:
+#     print("B")
+# elif c<=e:
+#     print("C")
+# elif d<=e:
+#     print("D")
+# else :
+#     print("F")
+
+# a = 2022
+# if (a%4== 0 and s%100 !=0) or a%400 == 0:
+#     pfint(1)
+# else:
+#     print(0)
+
+#리스트 []로 작성된다
+
+# 더하기 뺴기 곱하기 나누기 나머지 몫
+# + _- * / % //
+#
+# a= int(input())
+# b=[]
+#
+# for i in range(a):
+#     c = int(input())
+#     b.append(c)
+# print(b)
+# mx = b[0]
+# mn = b[0]
+# for j in range(len(b)):
+#     if b[j] > mx:
+#         mn = b[j]
+#     elif b[j] < mn:
+#         mn =b[j]
+# print(mx)
+# print(mn)
+
+# a = int(input())
+# c = []
+# f = []
+# anw = 0
+# for i in range(a):
+#     b = int(input())
+#     c.append(b)
+# m = max(c)
+#
+# for i in range(len(c)):
+#     o = c[i]/m*100
+#     f.append(o)
+#     anw = sum(f)/len(f)
+# print(anw)
+# 튜플은 값을 변화ㅅ
+# t1 = ()
+# t2 = (1,)
+# t3 = (1,2,3)
+# t4 = 1,2,3
+# t5 = ('a','b',('ab','cd'))
+
+# t1 = ('a','b','c')
+# print(t1)
+# t1 = ('b','d','c')
+# print(t1
+# t1 = (1,2,)
+
+# t1 = (1,2,'a','b')
+# t2 = (3,4)
+# print(t1+t2)
+
+# 딕셔너리-딕셔너리 여러 개값을 한꺼번에 모은다. + 관련된 정보를 서로 연관시겨 놓은다
+
+# sport = {"김연아":"피겨스케이팅","류현진":"야구","손흥민":"축구"}
+# print(sport)
+# print(type(sport))
+#
+# a= {1:'hi'}
+# a1 = {'a':[1,2,3]}
+# print(a)
+# print(a1)
+#
+# a = {1:'a'}
+# print(a)
+# a[2] = 'b'
+# a['name']= 'son'
+# a[3] = [1,2,3]
+# print(a)
+
+# a[2] = 'b'
+# a['name']='son'
+# a[3] = [1,2,3]
+# print(a)
+# del a['name']
+# print(a)
+# print(l)
+
+
+# grade = {'son':7, 'kane':10}
+# print(grade['son'])
+# print(grade['kane'])
+#
+# a = {1:'a', 2:'b'}
+# print(a[1])
+# print(a[2])
+#
+# a = {'a':1, 'b':2}
+# print(a['a'])
+# print(a['b'])
