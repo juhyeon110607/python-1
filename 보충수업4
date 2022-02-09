@@ -1,0 +1,350 @@
+# #반복문
+# a=0
+# 동안 <10:
+# a += 1
+# 인쇄(a)
+
+#두수 a와 b를 급하게 a+b
+
+# 참인 동안:
+# A=int(입력())
+# B=int(입력())
+# A==0이고 B==0인 경우:
+# 부서지다
+# 인쇄(A+B)
+
+
+#while문 - 무한루프
+# 참- 참
+
+# a= 참
+# b= 거짓
+#
+# 인쇄(유형(a))
+# 인쇄(유형(b))
+#
+# 참인 동안:
+# print("ctrl+c를 통해 수업을 진행하고 있습니다")
+# a = input(")
+# if a == "Ctrl+C":
+# 부서지다
+
+#반복문
+    #for문
+
+    #for 우수 인리스트(또는튜플, 질문열):
+
+
+    #에시
+# test_list = [ '하나', 'twd' , '셋']
+# test_list에 있는 i의 경우:
+# 인쇄(i)
+
+#범위
+#숫자리스트를 유지하기 위해
+
+
+#[1,2,3,4]
+# 범위(5)에 있는 i의 경우:
+# 인쇄(i)
+#
+# 범위(n)에 있는 i에 대해:
+# 인쇄(i)
+# 범위(2,5)에 있는 i의 경우:
+# 인쇄(i)
+# 범위(1,11,2)에 있는 i의 경우:
+# 인쇄(i)
+#
+# 추가 = 0
+# 범위(1,11)에 있는 i의 경우:
+# 더하다 = 더하다+나
+# 인쇄(추가)
+
+#
+# 범위(3,100,3)에 있는 i의 경우:
+# 인쇄(i)
+
+# 범위(1,10)에 있는 i의 경우:
+# 인쇄(i)
+#
+# 범위(1,101)에 있는 i의 경우:
+# 내가 % 3 ==0인 경우
+# 인쇄(i)
+
+# T=int(입력())
+# 범위(T)에 있는 i에 대해:
+# a=int(입력())
+# b=int(입력())
+# 인쇄(a+b)
+
+#별찍기
+# A = 정수(입력())
+#
+# 범위(A+1)에 있는 i의 경우:
+# 별표 = "*"
+# A=별
+# 인쇄(A*i)
+
+# x=1
+# x < 6인 동안:
+# 인쇄("*"*x)
+# x += 1
+
+
+
+# ---------------------
+#본 수업 2번쨰 시간
+
+# while문
+# 불 복문
+# while - 무한 루프
+# for문
+
+# 369 문제
+# a=0
+# while a <100:
+#     a+=1
+#     if (a % 10 == 3 or a%10==6 or a%10==9) and (a // 10 == 3 or a // 10 == 6 or a // 10 == 9):
+#         print("**")
+#     elif a % 10 == 3 or a % 10 == 6 or a % 10 == 9:
+#         print("*")
+#     elif a // 10 == 3 or a // 10 == 6 or a // 10 == 9:
+#         print("*")
+#     else:
+#         print(a)
+
+# for a in range(1,101):
+#     if (a % 10 == 3 or a % 10 == 6 or a % 10 == 9) and (a // 10 == 3 or a // 10 == 6 or a // 10 == 9):
+#          print("**")
+#     elif a % 10 == 3 or a % 10 == 6 or a % 10 == 9:
+#          print("*")
+#     elif a // 10 == 3 or a // 10 == 6 or a // 10 == 9:
+#          print("*")
+#     else:
+
+#리스트
+
+# a=[1,2,3]
+# print(a[0]) + a[2])
+# print(a[0]) + a[2])
+# print(a[-2])
+# a = [1,2,3,['a','b','c']]
+# print(a[3])
+# print(a[3][0])
+# print(a[-1][0])
+# a = [1,2,['a','b',['life','is']]]
+# print(a[2][2][0])
+
+# a= [1,2,3,4,5]
+# print(a[0:2])
+# b = a[:2]
+# print(b)
+# c= a[2:]
+# print(c)
+# a=[1,2,3,['a','b','c'],4,5]
+# print(a[2:5])
+# print(a[3][:2])
+
+# a=[1,2,3]
+ # b=[4,5,6]
+ # print(a+b)
+ # print(a*3)
+# print(len(a))
+
+# a=[1,2,3]
+# print(str(a[2])+"hi")
+
+#리스트의 수정
+# a = [1,2,3]
+# print(a)
+# a[2] = 4
+# print(a)
+# a[1] = 5
+# print(a)
+# del a[1]
+# print(a)
+# b = []
+# a= int(input())
+# b.append(a)
+# print(b)
+# a=[1,2,3]
+# a.append(4)
+# print(a)
+
+# a=[1,4,3,2]
+# print(a)
+# a.sort()
+# print(a)
+# a = ['a','c''b']
+# print(a)
+# a.reverse()
+# print(a)
+
+# a = [1,4,3,2]
+# print(a)
+# a.sort(a)
+# print(reverse=True)
+# print(a)
+# a.sort(reverse=palse)
+# print(a)
+# a.sort()
+# print()
+
+# a = [1,2,3]
+# a.index(2)
+# print(a)
+
+# a = [1,2,3]
+# a.insert(0,4)
+# print(a)
+# a.insert(1.7)
+# print(a)
+#
+# a= [1,2,3,1,2,3]
+# a.reverse(3)
+# print(a)
+# a.reverse(3)
+# print(a)
+
+# a= [1,2,3]
+# a.remove(2)
+# print(a)
+#
+# a=[4,5,6]
+# a.pop(2)
+# print(a)
+# a.pop(0)
+# print(a)
+#
+# a=[1,2,3,1]
+# print(a.count(1))
+# print((a.count(0)))
+# print(a.count(2))
+#
+# a= [1,2,3]
+# print(a)
+# a.extend()
+
+
+#리스트 예제 문제
+
+
+
+#----보충수업-----
+# a='Hello python'
+#print(a.count('o'))
+#print(a.find('1'))
+#print(a.index('x'))
+#print(','.join(a))
+#print(a.replace('py','MY'))
+#print(a.split())
+# print(a.upper())
+# print(a.lower())
+#
+# a= "....app.le...."
+# print('l',a.lstrip('.'),'l',sep="")
+# print('l',a.strip('.'),'l',sep="")
+# print('l',a.rstrip('.'),'l',sep="")
+#
+# if 조건문:조건문이 참 일경우
+#     실행문
+# elof
+# else
+# 논리 연산자:and,or not
+#
+# while문:개속 반복하는문
+# 실행문1
+# if 조건문:
+#     continue
+# if 조건문:
+#     break
+#
+# break
+# for문
+#     for 변수 in range (시작, 끝(-1),조건):
+#         실행문
+#     for 변수 in 리스트/튜플/문자열:
+#         실행문
+#
+# 리스트=여러 데이터 값들의 묶음인 자료형
+# 리스트 명 =[원소1,원소2,[원소3-1,원ㅅ3-2],원소4]
+# 리스트의 가능한 연산들=수정,작제,추가,+,X(문자열과 동일)
+# 수정
+# a=[1,2,3]->a[2]=4
+# 삭제
+# del a[0]
+# 연산
+# b=[5,6]->print(a+b),print(a*3)
+
+# a=[1,2,3,4]
+# a.append(5)=마지막 인덱스에 추가
+# a.sort()or a.sort(reverse=True/False)=순서정력
+# a.reverse()=순서 반적
+# lndex= 해당 문자의 유무 확인
+# a.index(3)
+# a.index(0)
+# insert=원하는 위치에 삽입
+# remove=해당 인덱스 위치의 문자삭제
+# a.extend([5,6])=리스트 확장
+#pop = 특정위치 또는 마지막 인덱스 위치 추출
+# extend=리스트 확장(추가X)
+# count= 해당 문자의 개수 세기
+
+
+# 튜플-리스트와 유사하지만 수정,삭제 등이 불가능하다
+
+# 딕셔너리-딕셔너리는 key-value로 이루어진 자료형(연관배열 또는 hash)
+# d ={'apple':'사과',"banana":"바나나",3:'삼'}
+# print(d['apple'],d["banana"],d[3])
+# 딕셔너리에 key - value 추가,삭제
+# 추가 d[1]='일' 삭제 del d[1]
+# 딕셔너리에서 없는 값을 찾는다면
+# print(d['x'])
+
+# 딕셔너리-자료형
+
+# 딕셔너리에서 key 값, value값 뽑아내기
+# key =d.keys()
+# value = d.values()
+# item = d.items()
+# print(list(key))
+# print(list(value))
+# print(list(item))
+# print('x'in d.keys())
+# print('apple'in d.keys())
+
+# print(bool('python'),bool(''))
+# print(bool([1,2,3]),bool([]))
+# print(bool((1,2)),bool(()))
+# print(bool({'1':1}),bool({}))
+# print(bool(-3),bool(0))
+# print(bool(None))
+
+# H=int(input())
+# M=int(input())
+#
+# if  H == 1 and M < 45:
+#     H +=23
+#     M +=60
+#
+# elif M<45:
+#     H-=1
+#     M += 60
+# print(H%24, (M-45)%60)
+
+T=int(input())
+
+# for I in range (1,T+1):
+#     A = int(input())
+#     B = int(input())
+#     A = int(A)
+#     B = int(B)
+#     print("Case #",I,A,'+',B,'=',A+B)
+
+
+# for문
+#     for 변수 in range (시작, 끝(-1),조건):
+#         실행문
+#     for 변수 in 리스트/튜플/문자열:
+#         실행문
+
