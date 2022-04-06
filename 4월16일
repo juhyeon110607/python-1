@@ -1,0 +1,6 @@
+def solution(numbers):
+    hap = 0
+    for i in range(len(numbers)):
+        hap += numbers[i]
+    answer=45-hap
+    return answer
