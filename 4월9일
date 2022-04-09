@@ -1,0 +1,71 @@
+# file_name="pasword txt"
+# f= open(file_name, "m")
+# while True:
+#     wrl = input("사이트 :")
+
+# MyFile = open('practice.txt','r')
+#-- 여기에 들어갈 내용 3개
+# MyFile.close()
+
+#1. read 사용하는 경우
+# MyFile= open('새 파일.txt','r')
+# print(MyFile.read().count("\n")+1)
+# MyFile.close()
+#
+# #2. readline() 사용하는 경우
+# # 읽어들일 값이 없을 떄까지 count를 매번 해야됨
+# MyFile =open('새 파일.txt','r')
+# cat=0
+# while True:
+#     if MyFile.readline() == '':
+#         break
+#     cat+=1
+# print(cat)
+# MyFile.close()
+
+#3. readlines()
+# MyFile = open('practice.txt','r')
+# print(len(MyFile.readlines()))
+# MyFile.close()
+
+# a=int(input())
+# b=int(input())
+# c=0
+# if a>b:
+#     c+=b
+#     b=a
+#     a=c
+#     while True:
+#         for i in range(1, 10):
+#             print(a*i)
+#             if i==9:
+#                 a+=1
+#             if a==b:
+#              break
+
+# def a(n):
+#     print("==%ddan=="%n)
+#     for i in range(1,10):
+#         print("%d * %d = %d"%(n, i, n*i))
+#     print()
+# v,b = map(int, input().split())
+# for n in range(min(v,b), max(v,b)+1):
+#     a(n)
+
+# def print_10():
+#     print("@"*10)
+#
+# text = ['first', 'second','third']
+#
+# for i in range(3):
+#     print(text[i])
+#     print_10()
+
+def a(n):
+    for i in range(1,n+1):
+        for j in range(1,n+1):
+            print(i*j, end='  ')
+        print()
+
+n= int(input())
+a(n)
