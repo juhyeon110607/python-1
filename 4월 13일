@@ -1,0 +1,115 @@
+# file_name="pasword txt"
+# f= open(file_name, "m")
+# while True:
+#     wrl = input("사이트 :")
+
+# MyFile = open('practice.txt','r')
+#-- 여기에 들어갈 내용 3개
+# MyFile.close()
+
+#1. read 사용하는 경우
+# MyFile= open('새 파일.txt','r')
+# print(MyFile.read().count("\n")+1)
+# MyFile.close()
+#
+# #2. readline() 사용하는 경우
+# # 읽어들일 값이 없을 떄까지 count를 매번 해야됨
+# MyFile =open('새 파일.txt','r')
+# cat=0
+# while True:
+#     if MyFile.readline() == '':
+#         break
+#     cat+=1
+# print(cat)
+# MyFile.close()
+
+#3. readlines()
+# MyFile = open('practice.txt','r')
+# print(len(MyFile.readlines()))
+# MyFile.close()
+
+# a=int(input())
+# b=int(input())
+# c=0
+# if a>b:
+#     c+=b
+#     b=a
+#     a=c
+#     while True:
+#         for i in range(1, 10):
+#             print(a*i)
+#             if i==9:
+#                 a+=1
+#             if a==b:
+#              break
+
+# def a(n):
+#     print("==%ddan=="%n)
+#     for i in range(1,10):
+#         print("%d * %d = %d"%(n, i, n*i))
+#     print()
+# v,b = map(int, input().split())
+# for n in range(min(v,b), max(v,b)+1):
+#     a(n)
+
+# def print_10():
+#     print("@"*10)
+#
+# text = ['first', 'second','third']
+#
+# for i in range(3):
+#     print(text[i])
+#     print_10()
+#
+# def a(n):
+#     for i in range(1,n+1):
+#         for j in range(1,n+1):
+#             print(i*j, end='  ')
+#         print()
+#
+# n= int(input())
+# a(n)
+
+# f = open("test.txt","a")
+# 객채 = open("파일이름","모드") 모드 = [ r=read(읽기모드),w-write(쓰기모드),a=add(추가하기) ]
+#read()= 파일에 있는 글을 모두 불러온다.
+#write("문자열") = 문자열이 파일에 있는걸 지우고 새로 쓰여진다.
+#add() = 추가해주는 함수
+# a= f.read()
+# cnt=0
+# for i in a:
+#     if '\n' in i:
+#      cnt += 1
+# print(cnt+1)
+
+# a= f.readline() #readline() =한줄만 읽어 온다.
+# print(a)
+
+# a =f.readlines()
+# cnt=0
+# for i in a:
+#     if '\n' in i:
+#      cnt += 1
+# print(cnt+1)
+#
+# f.close()#파일을 종료하는 함수
+
+# 구구단 출력하기
+# def c(a,b):
+#     if a>b:
+#        a,b=b,a
+#     for e in range(a,b+1):
+#         print("===%d단===" %e)
+#         for i in range(1,10):
+#             print("%d * %d = %d" %(e, i, e*i))
+# x,y=map(int,input().split(','))
+# c(x,y)
+# 사각형 출력하기
+def c(x):
+    for i in range(1,x+1):
+        for e in range(1, x+1):
+            print(i*e, end=' ')
+        print()
+
+a = int(input())
+c(a)
