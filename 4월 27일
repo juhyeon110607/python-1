@@ -1,0 +1,27 @@
+# a='python'
+# print(a[0],a[2])
+
+# a="24가2210"
+# print(a[-4:])
+
+# a= "홀짝홀짝홀짝"
+# print(a[::2])
+
+# a="010-1111-2222"
+# b = a.replace("-"," ")
+# print(b)
+
+# a = "010-1111-2222"
+# b= a.replace("-","")
+# print(b)
+
+# a= "http://sharebook.kr"
+# print(a[-2:])
+
+# url = "http://shqewrqrwerqwrqrweqwarebook.kr"
+# url_split = url.split('.')
+# print(url_split[-1])
+
+# a='abcdfe2a354a32a'
+# a= a.replace("a","A")
+# print(a)
