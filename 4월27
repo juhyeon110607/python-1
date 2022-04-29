@@ -1,0 +1,60 @@
+# a="3"
+# b="4"
+# print(a+b)
+
+# print("Hi" * 3)
+
+# print("-" * 80)
+
+# t1 = 'python'
+# t2 = 'java'
+# t3= t1 + ' ' +t2 + ' '
+# print(t3*4)
+
+# name1="김민수"
+# age1= 10
+# name2 = "이철희"
+# age2 = 13
+#
+# print("이름: %s 나이: %d"%(name1,age1))
+# print("이름: %s 나이: %d"%(name2,age2))
+
+# 상장주식수 = "5,969,782,550"
+# 컴마제거= 상장주식수.replace(",","")
+# a=int(컴마제거)
+# print(a)
+
+# 분기 = "2020/3 (E) (IFRS열결)"
+# print(분기[:7])
+
+# data = "   삼성전자    "
+# a=data.strip(" ")
+# print(a)
+
+# a="btc_krw"
+# b=a.upper()
+# print(b)
+
+# a="BTC_KRW"
+# b=a.lower()
+# print(b)
+
+# a="hello"
+# b=a.capitalize()
+# print(b)
+
+# a = "hello world"
+# b = a.split(" ")
+# print(b)
+
+# a = "btc_Krw"
+# b = a.split("_")
+# print(b)
+
+# a = "2020-05-01"
+# b = a.split("-")
+# print(b[0],b[1],b[2])
+
+# a = "039490      "
+# b= a.rstrip(" ")
+# print(b)
