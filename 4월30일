@@ -1,0 +1,21 @@
+
+e=('o')
+f=('X')
+def a(b,c,e,f):
+    print(b)
+    print(f)
+    print(c)
+    print(f)
+    print(e)
+
+
+    return b,c,e,f
+print(a(' | | ',' | | ',' | | ','_ _ _'))
+
+# def  b(B,C):
+#     for i in range(0,10):
+#         if B==1 and C==1:
+#             print('  '[0]==e)
+#         elif b==1 and C==2:
+#             print()
+# b(int(input('위치 :')),int(input('위치2 :')))
