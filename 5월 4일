@@ -1,0 +1,40 @@
+import random
+
+a = 0
+board = ['*','*','*','*','*','*','*','*','*']
+
+def print_board(board):
+    print(' %s | %s | %s'%(board[0],board[1],board[2]))
+    print(' %s | %s | %s'%(board[3], board[4], board[5]))
+    print(' %s | %s | %s' % (board[6], board[7], board[8]))
+print_board(board)
+
+def victory(o):
+        if board[0]==o and board[1]==o and board[2]==o:
+            print('victory')
+        elif board[3]==o and board[4]==o and board[5]==o:
+            print('victory')
+        elif board[6] == o and board[7] == o and board[8] == o:
+            print('victory')
+        elif board[0] == o and board[3] == o and board[6] == o:
+            print('victory')
+        elif board[1] == o and board[4] == o and board[7] == o:
+            print('victory')
+        elif board[2] == o and board[5] == o and board[8] == o:
+            print('victory')
+        elif board[0] == o and board[4] == o and board[8] == o:
+            print('victory')
+        elif board[2] == o and board[4] == o and board[6] == o:
+            print('victory')
+victory('o')
+
+if a%2==1:
+    while True:
+        player = int(input('숫자를 입력하시요:'))
+        board[a - 1] = 'o'
+        print_board(board)
+        victory('o')
+        a+=1   
+else:
+    while True:
+        computer = random.randrange(0,9)
