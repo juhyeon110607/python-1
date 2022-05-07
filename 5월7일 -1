@@ -1,0 +1,106 @@
+a=open('abcd.txt','r')
+
+b=int(input('아이디를 입력하시오:'))
+c=int(input('패스워드를 입력하시오:'))
+a.readlines()
+if b==a.readlines(0) or c == a.readlines(1):
+    pass
+else:
+    print('아이디나 비밀번호가 틀렸습니다')
+import random
+
+
+board = ['*','*','*','*','*','*','*','*','*']
+
+def print_board(board):
+    print(' %s | %s | %s'%(board[0],board[1],board[2]))
+    print(' %s | %s | %s'%(board[3], board[4], board[5]))
+    print(' %s | %s | %s' % (board[6], board[7], board[8]))
+    print('--------------------------------------------------')
+print_board(board)
+
+def victory(o,a):
+    while True:
+        player = int(input('숫자를 입력하시요:'))
+        while True:
+            if board[player - 1] == 'o' or board[player - 1] == 'X':
+                print('이미 둔 자리입니다')
+                player = int(input('숫자를 입력하시요:'))
+            elif not board[player - 1] == 'o' or not board[player - 1] == 'X':
+                break
+
+        board[player - 1] = 'o'
+        print_board(board)
+
+        if board[0]==o and board[1]==o and board[2]==o:
+            print('승리')
+            break
+        elif board[3]==o and board[4]==o and board[5]==o:
+            print('승리')
+            break
+        elif board[6] == o and board[7] == o and board[8] == o:
+            print('승리')
+            break
+        elif board[0] == o and board[3] == o and board[6] == o:
+            print('승리')
+            break
+        elif board[1] == o and board[4] == o and board[7] == o:
+            print('승리')
+            break
+        elif board[2] == o and board[5] == o and board[8] == o:
+            print('승리')
+            break
+        elif board[0] == o and board[4] == o and board[8] == o:
+            print('승리')
+            break
+        elif board[2] == o and board[4] == o and board[6] == o:
+            print('승리')
+            break
+
+        a += 1
+        if a == 9:
+            print('무승부')
+            break
+
+        computer = random.randrange(0, 9)
+
+        while True:
+            if board[computer - 1] == 'o' or board[computer - 1] == 'X':
+                computer = random.randrange(0, 9)
+
+            elif not board[computer - 1] == 'o' or not board[computer - 1] == 'X':
+                board[computer - 1] = 'X'
+                break
+
+        print_board(board)
+
+        if board[0]=='X' and board[1]=='X' and board[2]=='X':
+            print('패배')
+            break
+        elif board[3]=='X' and board[4]=='X' and board[5]=='X':
+            print('패배')
+            break
+        elif board[6] == 'X' and board[7] == 'X' and board[8] == 'X':
+            print('패배')
+            break
+        elif board[0] == 'X' and board[3] == 'X' and board[6] == 'X':
+            print('패배')
+            break
+        elif board[1] == 'X' and board[4] == 'X' and board[7] == 'X':
+            print('패배')
+            break
+        elif board[2] == 'X' and board[5] == 'X' and board[8] == 'X':
+            print('패배')
+            break
+        elif board[0] == 'X' and board[4] == 'X' and board[8] == 'X':
+            print('패배')
+            break
+        elif board[2] == 'X' and board[4] == 'X' and board[6] == 'X':
+            print('패배')
+            break
+
+        a+=1
+        if a==9:
+            print('무승부')
+            break
+victory('o',0)
