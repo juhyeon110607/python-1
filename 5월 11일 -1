@@ -1,0 +1,96 @@
+import random
+a=open('abcd.txt','r')
+
+id = input('아이디를 입력하시오:')
+paasword = input('패스워드를 입력하시오:')
+
+f = a.readlines()
+t=(f[0][:-1])
+while True:
+    if id == t and paasword == f[1]:
+        break
+    else:
+        print('아이디나 비밀번호가 틀렸습니다.')
+board=['*','*','*','*','*','*','*','*','*']
+
+def print_board(board):
+    print(' %s | %s | %s'%(board[0],board[1],board[2]))
+    print(' %s | %s | %s'%(board[3], board[4], board[5]))
+    print(' %s | %s | %s' % (board[6], board[7], board[8]))
+    print('--------------------------------------------------')
+print_board(board)
+
+
+def victory(ox,board):
+    if board[0] == ox and board[1] == ox and board[2] == ox:
+        return 1
+    elif board[3]== ox and board[4]==ox and board[5]== ox:
+        return 1
+    elif board[6] == ox and board[7] == ox and board[8] == ox:
+        return 1
+    elif board[0] == ox and board[3] == ox and board[6] == ox:
+        return 1
+    elif board[1] == ox and board[4] == ox and board[7] == ox:
+        return 1
+    elif board[2] == ox and board[5] == ox and board[8] == ox:
+        return 1
+    elif board[0] == ox and board[4] == ox and board[8] == ox:
+        return 1
+    elif board[2] == ox and board[4] == ox and board[6] == ox:
+        return 1
+    else:
+        return 0
+
+
+
+
+def game(cnt):
+    com=''
+    play=input('o 또는 x를 선택하시오 :')
+    while True:
+        if play == 'o' or play == 'x':
+            break
+        if not play == 'o' or not play == 'x':
+            print('다시입력하시오')
+            play=input('o 또는 x를 선택하시오 :')
+    if play == 'o':
+        com = 'x'
+    else:
+        com = 'o'
+    while True:
+        player = int(input('숫자를 입력하시요:'))
+        while True:
+            if board[player - 1] == 'o' or board[player - 1] == 'x':
+                print('이미 둔 자리입니다')
+                player = int(input('숫자를 입력하시요:'))
+            elif not board[player - 1] == 'o' or not board[player - 1] == 'x':
+                break
+
+        board[player - 1] = play
+        print_board(board)
+
+        if victory(play,board)==1:
+            print('승리')
+            break
+        cnt += 1
+        if cnt == 9:
+            print('무승부')
+            break
+
+        computer = random.randrange(0, 9)
+
+        while True:
+            if board[computer - 1] == 'o' or board[computer - 1] == 'x':
+                computer = random.randrange(0, 9)
+            elif not board[computer - 1] == 'o' or not board[computer - 1] == 'x':
+                board[computer - 1] = com
+                break
+
+        print_board(board)
+        if victory(play, board) == 1:
+            print('패배')
+            break
+
+        cnt+=1
+
+game(0)
