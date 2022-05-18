@@ -1,0 +1,15 @@
+# def arr(arr1,arr2):
+#     cnt=len(arr1)
+#     cnt2 = len(arr1[0])
+#     answer = []
+#     answer2 = []
+#     for i in range(0,cnt):
+#         for l in range(0,cnt2):
+#             a=arr1[i][l] + arr2[i][l]
+#             answer2.append(a)
+#         answer.append(answer2)
+#         answer2 =[]
+#
+#     return answer
+# print(arr([[1, 2],[2, 3],[4,5]],[[3, 4],[5, 6],[7,8]]))
+#len
