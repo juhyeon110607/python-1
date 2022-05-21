@@ -1,0 +1,41 @@
+# a = int(input('숫자를 입력하시오: '))
+# f = a
+# cnt = 0
+# b = 0
+# one = 0
+# e = 0
+# 
+# while True:
+#     # if a < 10:
+#     #     a=(a*10)+a
+#     #     b = a // 10
+#     #     one = a % 10
+#     #     if b + one > 10:
+#     #         g = (b + one) % 10
+#     #         e = (one * 10) + g
+#     #         print(e)
+#     #         a = e
+#     #         cnt += 1
+#     #     else:
+#     #         e = (one * 10) + (b + one)
+#     #         print(e)
+#     #         a = e
+#     #         cnt += 1
+#     if e == f:
+#         print("--------------")
+#         print(cnt)
+#         break
+#     else:
+#         b = a//10
+#         one = a%10
+#         # if b+one>10:
+#         g=(b+one)%10
+#         e = (one * 10) + g
+#         print(e)
+#         a = e
+#         cnt += 1
+#     # else:
+        #     e = (one*10)+(b+one)
+        #     print(e)
+        #     a = e
+        #     cnt += 1
