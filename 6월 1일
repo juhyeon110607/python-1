@@ -1,0 +1,12 @@
+def solution(s, n):
+    alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
+     'x', 'y', 'z']
+    answer = []
+    for i in s:
+        if i.islower():
+            answer.append(alphabet[(alphabet.index(i)+n)%26])
+        else:
+            answer.append(alphabet[(alphabet.index(i.lower()) + n)%26].upper())
+        
+    print(answer)
+print(solution('Z',1))
