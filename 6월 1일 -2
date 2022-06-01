@@ -1,0 +1,27 @@
+# def solution(s, n):
+#     alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w',
+#      'x', 'y', 'z']
+#     answer = []
+#     for i in s:
+#         if i == ' ':
+#             answer.append(i)
+#         else:
+#             if i.islower():
+#                 answer.append(alphabet[(alphabet.index(i)+n)%26])
+#             else:
+#                 answer.append(alphabet[(alphabet.index(i.lower()) + n)%26].upper())
+#     answer = ''.join(answer)
+#     return answer
+# print(solution('a b c',1))
+# 국어 영어 수학 한문 과학 사회 역사
+
+#124 나라 1 2 4 11 12 14 21 22
+def solution(n):
+    digit = ['4','1','2']
+    answer = ''
+    while n:
+            answer += digit[n%3]
+            n = n // 3 - (n % 3 == 0)
+
+    return answer[::-1]
+print(solution(6))
