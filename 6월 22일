@@ -1,0 +1,13 @@
+def solution(strings, n):
+    list = []
+    list_tow = []
+    for i in strings:
+        list.append((i[n],i))
+    list.sort()
+    for i in list:
+        list_tow.append(i[1])
+    return list_tow
+
+print(solution(["abce", "abcd", "cdx"],2))
+# [sun , bed , car]
+# u - sun , e - bed , a -car
