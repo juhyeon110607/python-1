@@ -1,0 +1,17 @@
+# def solution(id_list, report, k):
+#     for i in report:
+#         i.split()
+#
+#     answer = []
+#     return answer
+# print(solution(["muzi", "frodo", "apeach", "neo"],["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"],2))
+
+# 3개의 매개변수를 받았다
+# report 리스트 에서 for문을 써  가져온다
+# split 함수를 사용하여 신고자와 대상자를 구별한다.
+# 신고자와 신고 대상자를 보고 if문 걸어 을 신고자와 대상자를 같은지 조건을 걸고 둘다 같으면은 새지 않는다.
+# 둘다 다르다면은 신고자와 대상자를 구별하여 누가 누굴 신고했는지 구별한다.
+# 전부 보았으면은 for문을 써서 id_list에서 id를 전부본다.
+# 그 중에 k번 이상 신고 받았는지 본다.
+# 만약 k번 이상 신고를 받았으면은 대상자를 신고한 신고자를 카운트 한다.
+# 전부 끝났으면은 return한다.
