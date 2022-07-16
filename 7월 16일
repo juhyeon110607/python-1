@@ -1,0 +1,54 @@
+# 집합
+# 중복을 허용 X
+# 순서가 없는 자료형
+
+# 합집합
+# s1 = set([1,2,3,4])
+# s2 = set([3,4,5])
+# print(s1 | s2) # 출력값 => {1,2,3,4,5}
+
+# def solution(record):
+#     answer = []
+#     D = {}
+#     for i in record:
+#         i = i.split(' ')
+#         if not D.keys() in i[1]:
+#             D['%s'%(i[1])] = i[2]
+#         elif D.keys() in i[1]:
+#
+#     for i in record:
+#         i = i.split(' ')
+#         if i[0] == 'Enter':
+#             i = ["%s 님이 들어왔습니다."%(i[2])]
+#             answer.append(i)
+#         elif i[0] == 'Leave':
+#             i = ['%s 님이 나갔습니다.'%(answer[])]
+#         elif i[0] == 'Chane':
+#             answer =
+#         else:
+#             i = ["%s 님이 나갔습니다." %(i[2])]
+#             answer.append(i)
+#     return answer
+# print(solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]))
+
+def solution(record):
+    answer = []
+    message = {}
+    setting = []
+    for i in record:
+        mes = i.split()
+        act = mes[0]
+        uid = mes[1]
+        if act == "Enter" or act == 'Change':
+            name = mes[2]
+            message[uid] = name
+        setting.append((act,uid))
+
+    for act_i in setting:
+        act, uid = act_i[0],act_i[1]
+        if act == "Enter":
+            answer.append("{}님이 들어왔습니다.".format(message[uid]))
+        elif act == "Leave":
+            answer.append("{}님이 나갔습니다.".format(message[uid]))
+    return answer
+print(solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]))
