@@ -1,0 +1,47 @@
+# def solution(id_list, report, k):
+#     D = {}
+#     L = []
+#     answer = []
+#     for i in report:
+#         i = i.split(" ")
+#         if i[0] in D.keys():
+#             D[i[0]].append(i[1])
+#         else:
+#              D[i[0]] = [i[1]]
+#     for i in D.values():
+#         L.append(i)
+#     for i in L:
+#         for a in id_list:
+#             answer.append = i.count(a)
+#
+#     return answer
+#
+# print(solution(["muzi", "frodo", "apeach", "neo"],["muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"],2))
+
+
+# 3개의 매개변수를 받았다
+# report 리스트 에서 for문을 써  가져온다
+# split 함수를 사용하여 신고자와 대상자를 구별한다.
+# 신고자와 신고 대상자를 보고 if문 걸어 을 신고자와 대상자를 같은지 조건을 걸고 둘다 같으면은 새지 않는다.
+# 둘다 다르다면은 신고자와 대상자를 구별하여 누가 누굴 신고했는지 구별한다.
+# 전부 보았으면은 딕셔너리로 전부 넣는다
+# 그 중에 k번 이상 신고 받았는지 본다.
+# 만약 k번 이상 신고를 받았으면은 대상자를 신고한 신고자를 카운트 한다.
+# 전부 끝났으면은 return한다.
+
+#정답 신고 받은 사람을 키값으로 넣고 벨루값의
+def solution(id_list, report, k):
+    D_info = {}
+    D_success = {}
+    report = list(set(report))
+    for id in id_list:
+        D_info[id] = []
+        D_success[id] = 0
+    for port in report:
+        user,target = port.split()
+        D_info[target].append(user)
+    for id in id_list:
+        if len(D_info[id]) >= k:
+            for report_id_ilst in D_info[id]:
+                D_success[report_id_ilst] +=1
+    return list(D_success.values())
