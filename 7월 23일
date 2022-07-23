@@ -1,0 +1,74 @@
+# def solution(numbers):
+#     zelo = 0
+#     answer = []
+#     numbers.sort()
+#     for i in numbers:
+#         for a in numbers:
+#             zelo = i + a
+#             if not numbers[len(i)] == numbers[len(a)] :
+#                 if not zelo in answer:
+#                     answer.append(zelo)
+#     answer = list(set(answer))
+#     answer.sort()
+#     return answer
+# print(solution([2,1,3,4,1]))
+
+# def solution(numbers):
+#     answer = []
+#     for i in range(0,len(numbers)):
+#         for j in range(i+1,len(numbers)):
+#             answer.append(numbers[i] + numbers[j])
+#     return sorted(list(set(answer)))
+name = '찬종한'
+money = 20000
+id = "hgnam"
+pesward = 'hgnam1801'
+while True:
+    id_i = (input("아이디 입력:"))
+    pesward_p = (input("비밀번호 입력"))
+    if id == id_i and  pesward == pesward_p:
+        break
+    else:
+        print('다시 입력해주십시오.')
+print('환영합니다 %s님' %(name))
+while True:
+    print('하실 일의 번호를 선택해 주세요')
+    print('1. 입금')
+    print('2. 출금')
+    print('3. 잔액조회')
+    print('4. 계좌이체')
+    print('5. 종료')
+    while True:
+        choice = int(input('입력하시오:'))
+        if  choice > 5 and choice <= 0 :
+            print('다시입력해주십시오.')
+        else:
+            break
+    if choice == 1:
+        print("입금하실 금액을 입력해 주세요.")
+        b = int(input('값입력:'))
+        money += b
+    elif choice == 2:
+        print("출금하실 금액을 입력해 주세요.")
+        input = int(input('값입력:'))
+        while True:
+            if input > money:
+                print('잔액이 부족합니다.')
+            else:
+                money -= input
+    elif choice == 3:
+        print('%s 고객님의 현재 통장 잔액은 %s원  입니다.' %(name,money))
+    elif choice == 4:
+        print('현재 계자의돈은 %s원 입니다.'%(money))
+        print('이체하실 계좌와 금액 입력해 주세요.')
+        a = input("계좌번호 입력:")
+        input_i = int(input("값입력:"))
+        if money < input_i:
+            print('잔액이 부족합니다.')
+            print('다시 입력해 주십시오')
+        else:
+            money -= input_i
+            print('%s의 계좌번호로 %s원을 성공적으로 이체했습니다.'%(a,input_i))
+    elif choice == 5:
+        print('이용해주셔서 감사합니다.')
+        brea
