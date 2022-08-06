@@ -1,0 +1,109 @@
+# def sum_nums(*arhs):
+#     total = ""
+#     for num in arhs:
+#         total += num + " "
+#     return total
+# print(sum_nums("Hello","Eueryone","my","name","is","parkchanBin"))
+
+# def Fourcal(**num):
+#     return '제 이름은 *s이고 나이 *d살이면 직업은 *s입니다.'%(num["A"],num["B"],num["C"])
+# print(Fourcal(A = '한종찬',B = 16,C = '학생'))
+
+# 1,4,7 = L
+# 3,6,9 = R
+# 2,5,8,0 = 가까운손가락(단,위치가 같으면 hand의 값에 따라 눌러준다.
+#
+# def solution(numbers, hand):
+#     answer = ''
+#     coord = ['*','#']
+#     r = (-1,-2)
+#     l = (1,-2)
+#     for i in numbers:
+#         if i == 1 or i == 4 or i == 7:
+#             answer += 'L'
+#             coord[0] = i
+#         elif i == 3 or i == 6 or i == 9:
+#             answer += 'R'
+#             coord[1] = i
+#         elif i == 2 or i == 5 or i == 8 or i == 0 :
+#             if i == 2:
+#                 if abs(coord[0]) > abs(coord[1]-1):
+#                     answer += 'L'
+#                     coord[0] = i
+#                 elif abs(coord[0]) < abs(coord[1]-1):
+#                     answer += 'R'
+#                     coord[1] += i
+#                 else:
+#                     if hand == "right":
+#                         answer += 'L'
+#                     elif hand ==  "left":
+#                         answer += "R"
+#             if i == 5:
+#                 if abs(coord[0]) > abs(coord[1]):
+#                     answer += 'L'
+#                     coord[0] += i
+#                 elif abs(coord[0]) < abs(coord[1]):
+#                     answer += 'R'
+#                     coord[1] += i
+#                 else:
+#                     if hand == "right":
+#                         answer += 'L'
+#                     elif hand ==  "left":
+#                         answer += "R"
+#             if i == 8:
+#                 if abs(coord[0]) > abs(coord[1]+1):
+#                     answer += 'L'
+#                     coord[0] = i
+#                 elif abs(coord[0]) < abs(coord[1]+1):
+#                     answer += 'R'
+#                     coord[1] = i
+#                 else:
+#                     if hand == "right":
+#                         answer += 'L'
+#                     elif hand ==  "left":
+#                         answer += "R"
+#             if i == 0:
+#                 if abs(coord[0]) > abs(coord[1] - 2):
+#                     answer += 'L'
+#                     coord[0] = i
+#                 elif abs(coord[0]) < abs(coord[1] - 2):
+#                     answer += 'R'
+#                     coord[1] = i
+#                 else:
+#                     if hand == "right":
+#                         answer += 'L'
+#                     elif hand == "left":
+#                         answer += "R"
+#     return answer
+# print(solution([1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5],"right"))
+
+def solution(numbers, hand):
+    r = (-1,-2)
+    l = (1,-2)
+    coord = [(0,-2),(-1,1),(0,1),(1,1),(-1,0),(0,0),(1,0),(-1,-1),(0,-1),(1,-1)]
+    answer = ''
+    for i in numbers:
+        if i in [1,4,7]:
+            answer += 'L'
+            l = coord[i]
+        elif i in [3,6,9]:
+            answer += 'R'
+            r = coord[i]
+        else:
+            ld = abs(coord[i][0] - l[0]) + abs(coord[i][1] - l[1])
+            rd = abs(coord[i][0] - r[0]) + abs(coord[i][1] - r[1])
+            if ld == rd:
+                if hand == 'left':
+                    answer +='L'
+                    l = coord[i]
+                else:
+                    answer +='R'
+                    r = coord[i]
+            elif ld > rd:
+                answer +='R'
+                r = coord[i]
+            else:
+                answer +='L'
+                l = coord[i]
+    return answer
+print(solution([1, 3, 4, 5, 8, 2, 1, 4, 5, 9, 5],"right"))
