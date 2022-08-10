@@ -1,0 +1,30 @@
+# #버블 정렬
+# def bubble_sort(list):
+#     a = 0
+#     for j in range(len(list)):
+#         for l in range(len(list)-j):
+#             for i in range(len(list)-j):
+#                 if i+1 == len(list):
+#                     if list[i-1] > list[i]:
+#                         a = list[i]
+#                         list[i] = list[i-1]
+#                         list[i] = a
+#                 else:
+#                     if list[i] > list[i+1]:
+#                         a = list[i+1]
+#                         list[i+1] = list[i]
+#                         list[i] = a
+#     return list
+# print(bubble_sort([7,4,5,1,3]))
+
+# 버블 역적렬
+# def bubble_sort(list):
+#     a = 0
+#     for i in range(len(list)):
+#         for j in range(len(list)-i-1):
+#             if list[j] < list[j+1]:
+#                 a = list[j]
+#                 list[j] = list[j+1]
+#                 list[j+1] = a
+#     return list
+# print(bubble_sort([7,4,5,1,3]))
