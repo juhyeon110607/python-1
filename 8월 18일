@@ -1,0 +1,14 @@
+#버블 정렬 while 문으로
+# def while_bubble_sort(list):
+#     cnt = len(list)
+#     cnt_tow = 0
+#     while not cnt == 0:
+#         if list[cnt_tow] > list[(cnt_tow)+1]:
+#             list[cnt_tow+1] , list[cnt_tow] = list[cnt_tow] , list[cnt_tow+1]
+#         cnt -= 1
+#         if cnt_tow + 1 == len(list):
+#             break
+#         else:
+#             cnt_tow += 1
+#     return list
+# print(while_bubble_sort([7,4,5,1,3]))
