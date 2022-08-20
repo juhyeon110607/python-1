@@ -1,0 +1,103 @@
+ def SortInside(list,reverse):
+#     if reverse:
+#         for i in range(len(list)):
+#             for l in range(len(list) - 1 - i):
+#                 if list[l] > list[l + 1]:
+#                     list[l + 1], list[l] = list[l], list[l + 1]
+#     else:
+#         for i in range(len(list)):
+#             for l in range(len(list)-1-i):
+#                  if list[l] < list[l+1]:
+#                     list[l+1],list[l] = list[l],list[l+1]
+#
+#     return list
+
+
+# def sortchoice(list,reverse):
+#     if reverse:
+#         for i in range(len(list)-1):
+#             for j in range(i+1,len(list)):
+#                 if list[i] > list[j]:
+#                     list[i],list[j] = list[j],list[i]
+#
+#
+#     else:
+#         for i in range(len(list)-1):
+#             for j in range(i+1,len(list)):
+#                 if list[i] < list[j]:
+#                     list[i],list[j] = list[j],list[i]
+#     return list
+#
+# print(sortchoice([4,3,1,2,5],False))
+
+# a = list(input())
+# for i in range(len(a)):
+#     a[i] = int(a [i])
+# print(SortInside(a,True))
+
+# def solution(array, commands):
+#     answer = []
+#     for i in commands:
+#         list = array[i[0]-1:i[1]]
+#         # 선택 적렬
+#         # for a in range(len(list) - 1):
+#         #     for j in range(a+1,len(list)):
+#         #                     if list[a] > list[j]:
+#         #                         list[a],list[j] = list[j],list[a]
+#
+#         # 버블 적렬
+#         # for a in range(len(list)):
+#         #     for l in range(len(list) - 1 - a):
+#         #                     if list[l] > list[l + 1]:
+#         #                         list[l + 1], list[l] = list[l], list[l + 1]
+#
+#         #퀵 적렬
+#         # list.sort()
+#
+#         answer.append(list[i[2]-1])
+#     return answer
+# print(solution([1, 5, 2, 6, 3, 7, 4],[[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+
+#for i in range(len(list)):
+#             for l in range(len(list) - 1 - i):
+#                 if list[l] > list[l + 1]:
+#                     list[l + 1], list[l] = list[l], list[l + 1]
+
+# def solution(citations):
+#     h = 0
+#     list = []
+#     while True:
+#         ideal = []
+#         ower_than = []
+#         for i in citations:
+#             if h >= i:
+#                 ower_than.append(i)
+#             if h <= i:
+#                 ideal.append(i)
+#         if h == len(ideal) == len(ower_than):
+#             list.append(h)
+#         elif h >= len(ower_than) and h <= len(ideal):
+#             list.append(h)
+#         elif h < len(ower_than) and h > len(ideal):
+#             break
+#         else:
+#             h += 1
+#
+#     return list[-1]
+# print(solution([3, 0, 6, 1, 5]))
+
+# def solution(citations):
+#     answer = 0
+#     citations.sort()
+# 
+#     for h in range(1,len(citations)+1):
+#         cnt_h =0
+#         cnt_l =0
+#         for i in citations:
+#             if i >= h:
+#                 cnt_h += 1
+#             elif i <= h:
+#                 cnt_l += 1
+#             if cnt_h >= h and cnt_l <= h and answer <h:
+#                 answer = h
+#     return answer
