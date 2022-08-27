@@ -1,0 +1,52 @@
+
+# def solution(survey, choices):
+#     answer = ''
+#     list = [0,-3,-2,-1,0,1,2,3]
+#     d = {"RT": 0 ,"CF":0,"JM":0,"AN":0}
+#     for i in range(len(survey)):
+#         if survey[i] not in d:d[survey[i][::-1]] += -list[choices[i]]
+#         else:d[survey[i]] += list[choices[i]]
+#     for j in d:
+#         if d[j] <= 0:answer +=j [0]
+#         else:answer += j[1]
+#     return answer
+#
+# print(solution(["AN", "CF", "MJ", "RT", "NA"],[5, 3, 2, 7, 5]))
+
+# 1번 지표	라이언형(R), 튜브형(T)
+# 2번 지표	콘형(C), 프로도형(F)
+# 3번 지표	제이지형(J), 무지형(M)
+# 4번 지표	어피치형(A), 네오형(N)
+
+# 로또
+# import random
+#
+# lotto = []
+# while len(lotto) <=5:
+#     number = random.randint(1,45)
+#     if number
+
+# 야구
+import random
+answer = (random.sample(range(0,10),3))
+print(answer)
+cnt = 10
+X = 0
+Y = 0
+while True:
+    print("남은 기회 %s" % (cnt))
+    cnt -= 1
+    a = input("숫자 3개를 입력하시오:").split()
+    for j in range(len(a)):
+        a[j] = int(a[j])
+    for i in range(len(a)):
+        if  a == answer:
+            print("WIN")
+            exit()
+        elif int(a[i]) == answer[i]:
+            X +=1
+        elif int(a[i]) in answer:
+            Y +=1
+        else:
+            print("Foul")
+    print("strike :%s","ball :%s"%(X,Y))
