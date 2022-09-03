@@ -1,0 +1,29 @@
+import random
+answer = (random.sample(range(0,10),3))
+cnt = 10
+while True:
+    if cnt == 0:
+        print("패배")
+        print("정답: %s"%(answer))
+        exit()
+    print("남은 기회 %s" % (cnt))
+    cnt -= 1
+    a = input("숫자 3개를 입력하시오:").split(",")
+    while not  len(a) == 3:
+        print("다시입력하시오")
+        a = input("숫자 3개를 입력하시오:").split(",")
+    for j in range(len(a)):a[j] = int(a[j])
+    strike = 0
+    ball = 0
+    Foul = 0
+    for i in range(len(a)):
+        if  a == answer:
+            print("WIN")
+            exit()
+        elif int(a[i]) == answer[i]:strike += 1
+        elif int(a[i]) in answer:ball += 1
+        elif not int(a[i]) in answer:
+            Foul += 1
+            if Foul == 3:print("Foul")
+
+    print("strike :%s , ball :%s"%(strike,ball))
