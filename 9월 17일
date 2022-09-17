@@ -1,0 +1,74 @@
+# 평균 구하기
+# def Average(list):
+#     A = 0
+#     for i in list:
+#         A += i
+#     return A // len(list)
+
+# 중앙 값 구하기
+# def median(list):
+#     if len(list) % 2 == 0:
+#         return (list[len(list) % 2] + list[(len(list) % 2)+ 1]) % 2
+#     else:
+#         return list[len(list)//2]
+# 편차 구하기
+# def Deviation(list):
+#     A = 0
+#     cnt = 0
+#     for i in list:
+#         A += i
+#     Average_tow = A // len(list)
+#     for l in list:
+#         list[cnt] = l - Average_tow
+#         cnt += 1
+#     return list
+
+# 분산 구하기
+# def Dispersion(list):
+#     A = 0
+#     B = 0
+#     cnt = 0
+#     for i in list:
+#         A += i
+#     Average_tow = A // len(list)
+#     for l in list:
+#         B += (l - Average_tow) ** (l - Average_tow)
+#         cnt += 1
+#     return B // len(list)
+# print(Average([1,2,3,4,5]))
+# print(median([1,2,3,4,5]))
+# print(Deviation([1,2,3,4,5]))
+# print(Dispersion([1,2,3,4,5]))
+# 제곱 => (밑)**(지수)
+
+# def solution(n):
+#     answer = 0
+#     for i in range(1,n+1):
+#         if n % i == 0:
+#             answer += i
+#     return answer
+# print(solution(12))
+
+# def solution(n):
+#     answer = 0
+#     n = (",".join(str(n)))
+#     for i in n:
+#         if not i == ",":
+#             answer += int(i)
+#     return answer
+# print(solution(123))
+
+# for i in range(5+1):
+#     print(" "*(5-i) + "*"*i)
+
+# for i in range(5,1,-1):
+#     print(" "*(5-i) + "*"*(1+(2*i)))
+
+n = int(input())
+# 6단계
+# for i in range(1,n):
+#     print(' '* (n-i) + '*' * (2*i-1))
+
+# 7 단계
+# for i in range(n,0,-1):
+#     print(' ' * (n-i) + '*' * (2 * i -1))
