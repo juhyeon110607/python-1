@@ -1,0 +1,48 @@
+# 8번 별찍기
+# for i in range(6):
+#     print("*"*i+" "*(5-i)+" "*(5-i)+"*"*i)
+# for l in range(4,0,-1):
+#     print("*" * l+ " " * (5 - l) + " " * (5 - l) + "*" * l)
+
+# 9번 별찍기
+# for i in range(5,0,-1):
+#     print(' '* (5-i) + '*' * (2* i - 1))
+# for j in range(1 , 5):
+#  print(' ' * (5- j -1) + '*' * (2*j + 1))
+
+# # 벌집
+# def a(n):
+#     cnt = 1
+#     num = 1
+#     while num < n:
+#          cnt += 1
+#          num +=(cnt - 1 ) * 6
+#     return cnt
+# print(a(13))
+
+#달팽이
+# def snail(A,B,V):
+#     distance = 0
+#     cnt = 0
+#     while distance <= V:
+#         distance += A
+#         distance -= B
+#         if distance >= V:break
+#         cnt += 1
+#     return cnt
+# print(snail(2, 1 ,5))
+
+# 설탕 문제
+# def sugar (n):
+#     cnt = 0
+#     while n >= 0:
+#         if n % 5 == 0:
+#             break
+#         n -= 3
+#         cnt += 1
+#     if n % 5 ==0:
+#         cnt += n //5
+#     else:
+#         return -1
+#     return cnt
+# print(sugar(18))
