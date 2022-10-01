@@ -1,0 +1,80 @@
+# 모스 부호
+# def solution(letter):
+
+#     answer = ''
+#     morse = {
+#         '.-': 'a', '-...': 'b', '-.-.': 'c', '-..': 'd', '.': 'e', '..-.': 'f',
+#         '--.': 'g', '....': 'h', '..': 'i', '.---': 'j', '-.-': 'k', '.-..': 'l',
+#         '--': 'm', '-.': 'n', '---': 'o', '.--.': 'p', '--.-': 'q', '.-.': 'r',
+#         '...': 's', '-': 't', '..-': 'u', '...-': 'v', '.--': 'w', '-..-': 'x',
+#         '-.--': 'y', '--..': 'z'}
+#     for i in range(len(letter.split(' '))):
+#         answer = answer + morse[letter.split(' ')[i]]
+#     return answer
+#
+# print(solution(".... . .-.. .-.. ---"))
+#
+# 식 참 거짓 구별하기
+# def cal(sik):
+#     x,op,y = sik
+#     if op == '-':
+#         return int(x) -int(y)
+#     else:
+#         return int(x) + int(y)
+# def solution(quiz):
+#     answer = []
+#     for g in quiz:
+#         l,r = g.split('=')
+#         s = l.split()
+#         if cal(s) == int(r):
+#             answer.append("O")
+#         else:
+#             answer.append("X")
+#     return answer
+# print(solution(["3 - 4 = -3", "5 + 6 = 11"]))
+
+# 분수 더하고 약분하기
+
+# def solution(denum1, num1, denum2, num2):
+#     rdnum = denum1 * num2 + denum2 * num1
+#     rnum = num1 * num2
+#     gcd = 0
+#     for i in range(min(rdnum,rnum),1,-1):
+#         if rdnum % i == 0 and rnum % i == 0:
+#             gcd = i
+#             break
+#     if gcd != 0 :
+#         rdnum //= gcd
+#         rnum //= gcd
+#
+#
+#     return [rdnum,rnum]
+# print(solution(1,2,3,4))
+def solution(dartResult):
+
+    score = []
+    area = {"S": 1,"D":2,"T":3}
+    for result in dartResult:
+        if len(score) == 0:
+            score.append(result)
+        elif result.isdigit():
+            if type(score[-1]) == str:
+                score.append(score.pop() + result)
+            else:
+                score.append(result)
+        elif result in area:
+                score.append(int(score.pop())** area[result])
+        elif result == '*':
+            if len(score) == 1:
+                score.append(int(score.pop())*2)
+
+            else:
+                num2 = score.pop()
+                num1 = score.pop()
+                score.append(int(num1)*2)
+                score.append(int(num2)*2)
+        elif result == '#':
+            score.append(int(score.pop())* -1)
+
+    answer = sum(score)
+    return answer
