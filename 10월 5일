@@ -1,0 +1,11 @@
+# sum 안에 있는 값을 다 더해준다
+def solution(dartResult):
+    scors = []
+    area = {"S": 1 , "D": 2 ,"T": 3 }
+    for i in dartResult:
+        
+        
+
+    answer = sum(scors)
+    return answer
+print(solution('1S2D*3T'))
