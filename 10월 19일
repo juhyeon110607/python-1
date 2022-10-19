@@ -1,0 +1,73 @@
+#10월 19일 수요일
+# def solution(keyinput, board):
+#     pos = [0,0] #현제 캐릭터의 위치의 자표
+#     lr = {"left" : -1 , "right":1} # X좌표 레프트,라이트로 딕셔너리로 만들었다
+#     ud = {"down" : -1,"up" : 1} # Y좌표 업,다운으로 딕셔너리로 만들었다
+#     limit_x = board[0]  // 2 # x좌표로의 한개점
+#     limit_y = board[1]  // 2 # y좌표로의 한개점
+#     for k in keyinput:#입력한 좌표 for문으로 한개씩 받아오기
+#         if k in lr: #lr안에 있는지
+#             if abs(pos[0] + lr[k]) > limit_x: # x좌표의 한개점을 넘어가는지
+#                 continue # 그냥 다음 반복으로 넘어간다
+#             pos[0] += lr[k]
+#         else:
+#             if abs(pos[1] + ud[k]) > limit_y: # y좌표의 한개점을 넘어가는지
+#                 continue
+#             pos[1] +=ud[k]
+#     return pos
+#
+# print(solution(["down", "down", "down", "down", "down"],[7, 9]))
+
+#문자속에 숫자들 더하기 내가 한거 미완성형
+# def solution(my_string):
+#     answer = 0
+#     int_str = ""
+#     for i in my_string:
+#         if i.isdigit():
+#             int_str += i
+#         else:
+#             if len(int_str) == 0:
+#                 pass
+#             else:
+#                 answer += int(int_str)
+#                 int_str = ""
+#     return answer
+# print(solution("aAb1B2cC34oOp"))
+
+# def solution(X, Y):
+#     list = []
+#     answer = ''
+#     for i in X:
+#         if i in Y:
+#             list.append(i)
+#             del Y[Y.index(i)]
+#     list.sort(reverse=True)
+#     for l in list:
+#         answer += l
+#     if len(list) == 0:
+#         return -1
+#     else:
+#         return answer
+#
+# print(solution("3403","13203"))
+
+# def solution(X, Y):
+#     answer = ''
+#     xnum = []
+#     ynum = []
+#     for i in range(10):
+#         xnum.append(X.count(str(i)))
+#         ynum.append(Y.count(str(i)))
+#     mate = []
+#     for j in range(10):
+#         if xnum[j] > 0 and ynum[j] > 0:
+#             mate += [str(j)] * min(xnum[j],ynum[j])
+#     mate.sort(reverse=True)
+#     answer = ''.join(mate)
+#     if len(answer) == 0:
+#         return "-1"
+#     elif len(answer) == answer.count('0'):
+#         return "0"
+#     else:
+#         return answer
+# print(solution("12321","42531"))
