@@ -1,0 +1,126 @@
+#10월 29일
+
+# def solution(lines):
+#     answer = 0
+#     nums = {}
+#     for line in lines:
+#         for i in range(line[0],line[1]):
+#             if i not in nums:
+#                 nums[i] = 1
+#             else:
+#                 nums[i] += 1
+#     for j in nums.values():
+#         if j > 1:
+#             answer += 1
+#     return answer
+# print(solution([[0, 1], [2, 5], [3, 9]]))
+
+# def solution(lines):
+#     answer = 0
+#     list = []
+#     for i in range(lines):
+#         list.append(range(i))
+#     print(list)
+#     return len(list) - len(set(list))
+# print(solution([[0, 1], [2, 5], [3, 9]]))
+
+
+# def solution(lines):
+#     answer = 0
+#     nums = {}
+#     for line in lines:
+#         for i in range(line[0],line[1]):
+#             if i not in nums:
+#                 nums[i] = 1
+#             else:
+#                 nums[i] += 1
+#     for j in nums.values():
+#         if j > 1:
+#             answer += 1
+#     return answer
+# print(solution([[0, 1], [2, 5], [3, 9]]))
+
+#def solution(array):
+#     answer = []
+#     answer.append(sorted(array)[-1])
+#     answer.append(array.index(sorted(array)[-1]))
+#     return answer
+#     return [max(array),array.index(max(array))]
+# print(solution([1,8,3]))
+
+# def solution(n, numlist):
+#     answer = []
+#     for i in numlist:
+#         if i % n == 0:
+#             answer.append(i)
+#     return answer
+#
+# print(solution(3,[4, 5, 6, 7, 8, 9, 10, 11, 12]))
+
+# def solution(my_string, num1, num2):
+#     list = []
+#     for i in my_string:
+#         list.append(i)
+#     list[num1],list[num2] = list[num2],list[num1]
+#     a = ""
+#     for i in list:
+#         a += i
+#     return a
+# print(solution("hello",1,2))
+#
+# def solution(price, money):
+#     answer = 0
+#     for i in price:answer += i
+#     if money < answer:return -1
+#     else:return money - answer
+#
+# print(solution([2100, 3200, 2100, 800],10000))
+
+# def solution(arr, k):
+#     list = []
+#     for i in arr:
+#         for l in i:
+#             list.append(l)
+#     return sorted(list)[k-1]
+
+
+#print(solution([[5,12,4,31],[24,13,11,2],[43,44,19,26],[33,65,20,21]],4))
+
+# def solution(name_list):
+#     answer = 0
+#     for name in name_list:
+#         for n in name:
+#             if n == 'j' or n == 'k':
+#                 answer += 1
+#                 break
+#     return answer
+# print(solution(["james", "luke", "oliver", "jack"]))#마지막 "jack"에서 "J"랑 "k"가 둘개가 있어서 2번 더해짐
+
+
+def func_a(s):#가장 큰 점수
+    ret = 0
+    for i in s:
+        if i > ret:
+            ret = i
+    return ret
+
+def func_b(s): # 총합 점수
+    ret = 0
+    for i in s:
+        ret += i
+    return ret
+
+def func_c(s): # 가장 작은 점수
+    ret = 101
+    for i in s:
+        if i < ret:
+            ret = i
+    return ret
+
+
+# def solution(scores):
+#     sum = func_b(scores)
+#     max_score = func_a(scores)
+#     min_score = func_c(scores)
+#     return sum - max_score - min_score
+# print(solution([50, 35, 78, 91, 85]))
