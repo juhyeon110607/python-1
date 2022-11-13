@@ -1,0 +1,20 @@
+
+def isprime(n):
+    for i in range(2,n):
+        if n % i == 0:
+            return False
+    return True
+
+def solution(nums):
+    answer = 0
+    m  = 0 # 숫자 세계를 다 더한 값을 넣어주는 함수
+    # 가능수 넣기
+    for l in range(len(nums)-2):
+        for j in range(l,len(nums)-2):
+            
+            n_nums = nums[l] + nums[l+j] + nums[l+j+1]
+            print(n_nums)
+        if isprime(n_nums):
+            answer += 1
+    return answer
+print(solution([1,2,3,4]))
