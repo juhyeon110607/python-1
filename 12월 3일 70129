@@ -1,0 +1,49 @@
+# 피오나치
+# def fibo(n):
+#     if n == 2:
+#         return 1
+#     elif n == 1:
+#         return 0
+#     return fibo(n-1)+fibo(n-2)
+#
+# print(fibo(27))
+
+# def su(n):
+#     if n == 1:
+#         return 1
+#     else:
+#         return su(n-1)*2+1
+#
+# a = 0
+# n = int(input())
+# for i in range(n):
+#     a += 2 ** i
+# print(a)
+
+# t = int(input()) # 테스트케이스 개수
+#
+# def recursion(s, l, r,cnt):
+#     cnt += 1
+#     if l >= r: return 1,cnt
+#     elif s[l] != s[r]: return 0,cnt
+#     else: return recursion(s, l+1, r-1,cnt+1)
+#
+#
+# def isPalindrome(s):
+#     return recursion(s, 0, len(s)-1,1)
+#
+#
+# for _ in range(t):
+#     w = input()
+
+    # answer = isPalindrome(w)#출력값: 펠린드롬의 결과,recursion 함수의 호출 횟수
+    # print(answer[0],answer[1])
+
+def solution(s):
+    return recursion(s,0)
+def recursion(s,cnt):
+    cnt +=1
+    if s == '1':
+        return #[recursion함수의 호출횟수,'0'을 제거한 횟수]
+    return
+print(solution("110010101001"))
