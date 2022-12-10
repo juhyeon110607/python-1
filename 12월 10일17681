@@ -1,0 +1,55 @@
+# bin()숫자를 2진수의 숫자 번호의 맞는 숫자로 바꿔줌
+# 해설
+# def solution(s,c,d):
+#     d += s.count('0')
+#     if s == '1':
+#         return [c,d]
+#     else:
+#         l = bin(s.count('1'))[2:]
+#         c += 1
+#         return solution(l,c,d)
+# def F(a):
+#     return solution(a,0,0)
+# print("110010101001")
+
+# def solution(n):
+#     answer = 0
+#     l = []
+#     cnt = 0
+#     while not n == 0:
+#         l.append(n%3)
+#         n = n//3
+#     for i in l[-1::-1]:
+#         answer += 3**cnt*i
+#         cnt +=1
+#     return answer
+#
+# print(solution(45))
+
+# def solution(s):
+#     answer = []
+#     l = []#이미 들어온 문자
+#     cnt = 0 #얼마나 멀리 있는지
+#     for i in s:
+#         if i in l:
+#             for j in l[-1:0:-1]:
+#                 if i == j:
+#                     answer.append(cnt)
+#
+#                 else:
+#                     cnt += 1
+#         else:
+#             answer.append(-1)
+#             l.append(i)
+#     return answer
+# print(solution("banana"))
+def solution(n, arr1, arr2):
+    answer = []
+    l = []
+    for i in range(n):
+        arr1[i] = bin(arr1[i])[2:]
+        arr2[i] = bin(arr2[i])[2:]
+    for j in range(n):
+
+    #return answer
+print(solution(5,[9, 20, 28, 18, 11],[30, 1, 21, 17, 28]))
