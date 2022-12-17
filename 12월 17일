@@ -1,0 +1,76 @@
+# def solution(n, arr1, arr2):
+#     answer = []
+#     ar = ''
+#     for i in range(n):
+#         arr1[i] = bin(arr1[i])[2:]
+#         arr2[i] = bin(arr2[i])[2:]
+#     for j in range(n):
+#         while not len(arr1[j]) == n:
+#             arr1[j] ='0' + arr1[j]
+#         while not len(arr2[j]) == n:
+#             arr2[j] ='0' + arr2[j]
+#     for a in range(n):
+#         print(int(arr1[a]) + int(arr2[a]))
+#         for b in str(int(arr1[a]) + int(arr2[a])):
+#             if b == '0':
+#                 ar = ar + ' '
+#             else:
+#                 ar = ar + '#'
+#         answer.append(ar)
+#         ar = ''
+#
+#
+#     return answer
+#print(solution(5,[9, 20, 28, 18, 11],[30, 1, 21, 17, 28]))
+#print(solution(6,[46, 33, 33 ,22, 31, 50],[27 ,56, 19, 14, 14, 10]))
+
+# def solution(new_id):
+#     new_id = new_id.lower()
+#     for i in new_id:
+#         if not (i.isalnum() or i in ['.','_','-']):
+#             new_id = new_id.replace(i,'')
+#     i = 0
+#     while i !=len(new_id):
+#         if i == len(new_id) - 1:
+#             break
+#         if new_id[i] == '.' and new_id[i +1] == '.':
+#             new_id = new_id[:i + 1] + new_id[i+2:]
+#         else:
+#             i += 1
+#     new_id = new_id.strip('.')
+#     if len(new_id) == 0:
+#         new_id += 'a'
+#     if len(new_id) >= 16:
+#         new_id = new_id[:15]
+#         new_id = new_id.strip('.')
+#     if len(new_id) <=2:
+#         new = new_id[-1]
+#         while len(new) != 3:
+#             new_id += new
+#
+#     return new_id
+# print(solution("...!@BaT#*..y.abcdefghijklm"))
+# print(solution("z-+.^."))
+
+#print(solution("=.="))
+#print(solution("123_.def"))
+#print(solution("abcdefghijklmn.p"))
+
+def solution(food):
+    answer = ''
+    num = 0
+    del food[0]
+    for i in food:
+        num += 1
+        for j in range(i//2):
+            answer += str(num)
+    answer += '0'
+    num += 1
+
+    for l in food:
+        num -= 1
+        print(answer)
+        for j in range(l//2):
+            answer += str(num)
+    return answer
+print(solution([1, 3, 4, 6]))
