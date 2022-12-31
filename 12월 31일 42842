@@ -1,0 +1,11 @@
+def solution(k, score):
+    answer = []
+    num_list = []
+    for i in score:
+        num_list.append(i)
+        num_list = sorted(num_list)
+        if len(num_list) == k+1:
+            del num_list[0]
+        answer.append(num_list[0])
+    return answer
+print(solution(3,[10, 100, 20, 150, 1, 100, 200]))
